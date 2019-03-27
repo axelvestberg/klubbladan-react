@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './friends.css';
+import React, { Component } from "react";
+import "./friends.css";
 
 class Friends extends Component {
   constructor() {
@@ -10,9 +10,13 @@ class Friends extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/friends')
+    fetch("/api/friends")
       .then(res => res.json())
-      .then(friends => this.setState({friends}, () => console.log('Friends fetched...', friends)));
+      .then(friends =>
+        this.setState({ friends }, () =>
+          console.log("Friends fetched...", friends)
+        )
+      );
   }
 
   render() {
@@ -20,9 +24,11 @@ class Friends extends Component {
       <div>
         <h2>Friends</h2>
         <ul>
-        {this.state.friends.map(friend => 
-          <li key={friend.id}>{friend.firstName} {friend.lastName}</li>
-        )}
+          {this.state.friends.map(friend => (
+            <li key={friend.id}>
+              {friend.firstName} {friend.lastName}
+            </li>
+          ))}
         </ul>
       </div>
     );

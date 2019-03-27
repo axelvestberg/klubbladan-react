@@ -14,6 +14,11 @@ app.get('/api/friends', (req, res) => {
   console.log(friends);
 });
 
+app.get( (req, res) => {
+
+  apiKey = '40040fdd5fe5996636f11ad9fbfd4e44';
+})
+
 const port = 8080;
 
 app.listen(port, () => `Server running on port ${port}`);
