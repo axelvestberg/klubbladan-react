@@ -1,20 +1,24 @@
 # React + Node.js boilerplate
 
 # Setup
-Install dependencies for server
-- npm install
-
-Install dependencies for client
-- npm run client-install
+Install dependencies for client & server with concurrently
+- npm run setup
 
 Run the client & server with concurrently
 - npm run dev
 
+# Other useful scripts
+Install dependencies for server only
+- npm run server-install
+
+Install dependencies for client only
+- npm run client-install
+
 Run the Express server only
-- npm run server
+- cd server && npm run server
 
 Run the React client only
-- npm run client
+- cd client && npm run client
 
 # Server runs on http://localhost:8080
 # Client runs on http://localhost:3000
