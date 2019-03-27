@@ -1,5 +1,6 @@
 {
   "name": "server",
+  "description": "Boiler plate for react + nodejs apps",
   "version": "1.0.0",
   "main": "server.js",
   "devDependencies": {
