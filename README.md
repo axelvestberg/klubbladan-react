@@ -1,5 +1,7 @@
 # React + Node.js boilerplate
 
+This repository is intended to be used as a base for new projects.
+
 # Setup
 
 To set up and start the project you need to run 3 commands from the project root.
@@ -16,7 +18,7 @@ Run the client & server with concurrently
 
 - npm run dev
 
-# Other useful scripts
+## Other useful scripts
 
 Install dependencies for server only
 
