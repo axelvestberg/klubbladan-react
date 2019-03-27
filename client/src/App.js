@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import Friends from './components/friends';
 
+
+let x;
+
 class App extends Component {
   render() {
     return (
