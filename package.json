@@ -1,15 +1,22 @@
 {
-    "name": "reactnodejs",
-    "description": "Boiler plate for react + nodejs apps",
-    "version": "1.0.0",
-    "private": true,
-    "scripts": {
-        "client-install": "cd client && npm install",
-        "server-install": "cd server && npm install",
-        "setup": "concurrently \"cd server && npm install -s\" \"cd client && npm install -s\"",
-        "dev": "concurrently \"cd server && npm run server\" \"cd client && npm run client\""
-    },
-    "dependencies": {
-        "concurrently": "^3.5.1"
-    }
+  "name": "reactnodejs",
+  "description": "Boiler plate for react + nodejs apps",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "client-install": "cd client && npm install",
+    "server-install": "cd server && npm install",
+    "setup": "concurrently \"cd server && npm install -s\" \"cd client && npm install -s\"",
+    "dev": "concurrently \"cd server && npm run server\" \"cd client && npm run client\"",
+    "precommit": "pretty-quick --staged"
+  },
+  "dependencies": {
+    "concurrently": "^3.5.1"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "prettier": "^1.16.4",
+    "pretty-quick": "^1.10.0"
+  }
 }
