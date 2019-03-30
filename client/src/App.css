@@ -9,7 +9,7 @@
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 120px;
   padding: 20px;
   color: white;
 }
@@ -30,3 +30,6 @@
     transform: rotate(360deg);
   }
 }
+/*
+Varför försvinner api fetch på openweather om jag tar bort all css här?
+*/
