@@ -10,11 +10,11 @@ class Friends extends Component {
   }
 
   componentDidMount() {
-    fetch("/api/friends")
+    fetch("/friends")
       .then(res => res.json())
       .then(friends =>
         this.setState({ friends }, () =>
-          console.log("Friends fetched...", friends)
+          console.log("Fetched friends data...", friends)
         )
       );
   }

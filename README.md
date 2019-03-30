@@ -36,6 +36,10 @@ Run the React client only
 
 - cd client && npm run client
 
-# Server runs on http://localhost:8080
+## Guides used as inspiration
 
-# Client runs on http://localhost:3000
+- Add ESLint & Prettier to VS Code for a Create React App - https://youtu.be/bfyI9yl3qfE
+
+### Server runs on http://localhost:8080
+
+### Client runs on http://localhost:3000
