@@ -8,6 +8,7 @@
     "server-install": "cd server && npm install",
     "setup": "concurrently \"npm run server-install\" \"npm run client-install\"",
     "dev": "concurrently \"cd server && npm run server\" \"cd client && npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "precommit": "pretty-quick --staged"
   },
   "dependencies": {
