@@ -13,7 +13,7 @@
     "dev": "concurrently \"cd server && npm run server\" \"cd client && npm run client\"",
     "heroku-postbuild": "npm run build",
     "precommit": "pretty-quick --staged",
-    "build": "concurrently \"cd client && npm run build\" \"cd server && npm run build\"",
+    "build": "concurrently \"cd client && npm install && npm run build\" \"cd server && npm install && npm run build\"",
     "start:prod": "cd server && npm run start:prod"
   },
   "dependencies": {
