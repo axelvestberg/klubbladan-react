@@ -4,11 +4,11 @@ import "./weather.css";
 class Weather extends Component {
   constructor() {
     super();
-
     this.state = {
       currentTemp: "",
       cityName: "",
       weatherDescription: "",
+      icon: ""
     };
   }
 
@@ -20,19 +20,23 @@ class Weather extends Component {
           {
             currentTemp: Math.round(data.data.main.temp),
             cityName: data.data.name,
-            weatherDescription: data.data.weather.description
+            weatherDesc: data.data.weather[0].description,
+            icon: data.data.weather[0].icon,
+            img: "http://openweathermap.org/img/w/" + data.data.weather[0].icon + ".png"
           },
-          () => console.log("Fetched weather data...", data)
+          () => console.log("Fetched weather data...", data),
+                console.log("Weather description: ", data.data.weather[0].description),
+                console.log("icon: ", data.data.weather[0].icon)
         );
       });
   }
 
   render() {
+    const ts = this.state;
     const CurrentWeather = (
       <div>
-        <h2>{this.state.cityName}</h2>
-        <p>{this.state.currentTemp} &#8451;</p>
-        <p>{this.state.weatherDescription}</p>
+        <p>{ts.cityName}: {ts.currentTemp}&#8451; and {ts.weatherDesc}</p>
+        <img src={ts.img} alt={ts.weatherDesc}/>
       </div>
     );
 

@@ -3,13 +3,18 @@
   "description": "Boiler plate for react + nodejs apps",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "10.15.3"
+  },
   "scripts": {
     "client-install": "cd client && npm install",
     "server-install": "cd server && npm install",
     "setup": "concurrently \"npm run server-install\" \"npm run client-install\"",
     "dev": "concurrently \"cd server && npm run server\" \"cd client && npm run client\"",
-    "heroku-postbuild": "cd client && npm install && npm run build",
-    "precommit": "pretty-quick --staged"
+    "heroku-postbuild": "npm run build",
+    "precommit": "pretty-quick --staged",
+    "build": "concurrently \"cd client && npm run build\" \"cd server && npm run build\"",
+    "start:prod": "cd server && npm run start:prod"
   },
   "dependencies": {
     "concurrently": "^3.5.1"

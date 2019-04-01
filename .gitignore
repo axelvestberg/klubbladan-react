@@ -40,3 +40,9 @@ chrome-user-data
 .vscode
 *.swp
 *.swo
+
+# Production ignores to only push build folder
+src/*
+public/*
+build/static/css/*.map
+build/static/js/*.map
