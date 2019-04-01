@@ -20,7 +20,7 @@ class Weather extends Component {
           {
             currentTemp: Math.round(data.data.main.temp),
             cityName: data.data.name,
-            weatherDescription: data.data.weather.description
+            weatherDescription: data.data.weather[0].description
           },
           () => console.log("Fetched weather data...", data)
         );
@@ -30,9 +30,7 @@ class Weather extends Component {
   render() {
     const CurrentWeather = (
       <div>
-        <h2>{this.state.cityName}</h2>
-        <p>{this.state.currentTemp} &#8451;</p>
-        <p>{this.state.weatherDescription}</p>
+        <p>{this.state.cityName}: {this.state.currentTemp} &#8451; and {this.state.weatherDescription}</p>
       </div>
     );
 
