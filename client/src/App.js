@@ -3,6 +3,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import Friends from "./components/friends";
 import Weather from "./components/weather";
+import Countdown from "./components/countdown";
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
         </header>
         <Friends />
         <Weather />
+        <Countdown />
       </div>
     );
   }
